@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="CSS/logo/favicon-32x32.png">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Elite Auto</title>
+</head>
+
+<body>
+
+<header class="site-header">
+    <a class="site-header__brand" href="#home">
+        <img class="site-header__logo" src="CSS/logo/logo.svg" alt="Elite Auto">
+        Elite<span class="site-header__brand-accent">Auto</span>
+    </a>
+
+    <nav class="site-header__nav">
+        <a class="site-header__link" href="#home">Home</a>
+        <a class="site-header__link" href="#cars">Cars</a>
+        <a class="site-header__link" href="#about">About</a>
+        <a class="site-header__link" href="#services">Services</a>
+        <a class="site-header__link" href="#contact">Contact</a>
+    </nav>
+
+    <a class="site-header__cta" href="#contact">Book Test Drive</a>
+</header>
+
+
+<main>
+<section class="hero" id="home">
+    <p class="hero__badge">Premium Collection 2024</p>
+
+    <h1 class="hero__title">
+        Drive Your<br>
+        <span class="hero__title-accent">Dream Today</span>
+    </h1>
+
+    <p class="hero__description">
+        Experience the perfect blend of luxury, performance, and innovation.
+        Your dream car awaits.
+    </p>
+
+    <div class="hero__actions">
+        <a class="hero__button hero__button--primary" href="#contact">Book a Test Drive</a>
+        <a class="hero__button hero__button--secondary" href="#cars">View Collection</a>
+    </div>
+
+    <dl class="hero__stats">
+        <div class="hero__stat">
+            <dt class="hero__stat-value">500+</dt>
+            <dd class="hero__stat-label">Premium Cars</dd>
+        </div>
+
+        <div class="hero__stat">
+            <dt class="hero__stat-value">15+</dt>
+            <dd class="hero__stat-label">Luxury Brands</dd>
+        </div>
+
+        <div class="hero__stat">
+            <dt class="hero__stat-value">98%</dt>
+            <dd class="hero__stat-label">Happy Customers</dd>
+        </div>
+    </dl>
+</section>
+
+
+<section class="cars" id="cars">
+
+    <header class="cars__header">
+        <p class="cars__badge">Our Collection</p>
+        <h2 class="cars__title">Featured Vehicles</h2>
+        <p class="cars__description">
+            Discover our handpicked selection of premium automobiles.
+        </p>
+    </header>
+
+    <ul class="cars__grid">
+
+        <li class="cars__item">
+            <article class="car-card">
+                <img class="car-card__image"
+                     src="CSS/Images/photo1.jpg"
+                     alt="Elite Sport GT">
+
+                <h3 class="car-card__title">Elite Sport GT</h3>
+                <p class="car-card__price">$89,999</p>
+
+                <ul class="car-card__specs">
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/speed.svg" alt="">
+                        <span class="car-card__spec-value">340 km/h</span>
+                        <span class="car-card__spec-label">Top Speed</span>
+                    </li>
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/power.svg" alt="">
+                        <span class="car-card__spec-value">650 HP</span>
+                        <span class="car-card__spec-label">Power</span>
+                    </li>
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/type.svg" alt="">
+                        <span class="car-card__spec-value">Hybrid</span>
+                        <span class="car-card__spec-label">Type</span>
+                    </li>
+                </ul>
+
+                <a class="car-card__button" href="#contact">Book Now</a>
+            </article>
+        </li>
+
+        <li class="cars__item">
+            <article class="car-card">
+                <img class="car-card__image"
+                     src="CSS/Images/photo2.jpg"
+                     alt="Prestige Sedan">
+
+                <h3 class="car-card__title">Prestige Sedan</h3>
+                <p class="car-card__price">$72,999</p>
+
+                <ul class="car-card__specs">
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/speed.svg" alt="">
+                        <span class="car-card__spec-value">280 km/h</span>
+                        <span class="car-card__spec-label">Top Speed</span>
+                    </li>
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/power.svg" alt="">
+                        <span class="car-card__spec-value">450 HP</span>
+                        <span class="car-card__spec-label">Power</span>
+                    </li>
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/type.svg" alt="">
+                        <span class="car-card__spec-value">Petrol</span>
+                        <span class="car-card__spec-label">Type</span>
+                    </li>
+                </ul>
+
+                <a class="car-card__button" href="#contact">Book Now</a>
+            </article>
+        </li>
+
+        <li class="cars__item">
+            <article class="car-card">
+                <img class="car-card__image"
+                     src="CSS/Images/photo3.jpg"
+                     alt="Luxury SUV Pro">
+
+                <h3 class="car-card__title">Luxury SUV Pro</h3>
+                <p class="car-card__price">$95,999</p>
+
+                <ul class="car-card__specs">
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/speed.svg" alt="">
+                        <span class="car-card__spec-value">240 km/h</span>
+                        <span class="car-card__spec-label">Top Speed</span>
+                    </li>
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/power.svg" alt="">
+                        <span class="car-card__spec-value">500 HP</span>
+                        <span class="car-card__spec-label">Power</span>
+                    </li>
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/type.svg" alt="">
+                        <span class="car-card__spec-value">Electric</span>
+                        <span class="car-card__spec-label">Type</span>
+                    </li>
+                </ul>
+
+                <a class="car-card__button" href="#contact">Book Now</a>
+            </article>
+        </li>
+
+        <li class="cars__item">
+            <article class="car-card">
+                <img class="car-card__image"
+                     src="CSS/Images/photo4.jpg"
+                     alt="Silver Phantom">
+
+                <h3 class="car-card__title">Silver Phantom</h3>
+                <p class="car-card__price">$125,999</p>
+
+                <ul class="car-card__specs">
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/speed.svg" alt="">
+                        <span class="car-card__spec-value">320 km/h</span>
+                        <span class="car-card__spec-label">Top Speed</span>
+                    </li>
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/power.svg" alt="">
+                        <span class="car-card__spec-value">720 HP</span>
+                        <span class="car-card__spec-label">Power</span>
+                    </li>
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/type.svg" alt="">
+                        <span class="car-card__spec-value">Petrol</span>
+                        <span class="car-card__spec-label">Type</span>
+                    </li>
+                </ul>
+
+                <a class="car-card__button" href="#contact">Book Now</a>
+            </article>
+        </li>
+
+        <li class="cars__item">
+            <article class="car-card">
+                <img class="car-card__image"
+                     src="CSS/Images/photo5.jpg"
+                     alt="Azure Performance">
+
+                <h3 class="car-card__title">Azure Performance</h3>
+                <p class="car-card__price">$108,999</p>
+
+                <ul class="car-card__specs">
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/speed.svg" alt="">
+                        <span class="car-card__spec-value">310 km/h</span>
+                        <span class="car-card__spec-label">Top Speed</span>
+                    </li>
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/power.svg" alt="">
+                        <span class="car-card__spec-value">680 HP</span>
+                        <span class="car-card__spec-label">Power</span>
+                    </li>
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/type.svg" alt="">
+                        <span class="car-card__spec-value">Hybrid</span>
+                        <span class="car-card__spec-label">Type</span>
+                    </li>
+                </ul>
+
+                <a class="car-card__button" href="#contact">Book Now</a>
+            </article>
+        </li>
+
+        <li class="cars__item">
+            <article class="car-card">
+                <img class="car-card__image"
+                     src="CSS/Images/photo6.jpg"
+                     alt="Grand Tourer X">
+
+                <h3 class="car-card__title">Grand Tourer X</h3>
+                <p class="car-card__price">$79,999</p>
+
+                <ul class="car-card__specs">
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/speed.svg" alt="">
+                        <span class="car-card__spec-value">290 km/h</span>
+                        <span class="car-card__spec-label">Top Speed</span>
+                    </li>
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/power.svg" alt="">
+                        <span class="car-card__spec-value">520 HP</span>
+                        <span class="car-card__spec-label">Power</span>
+                    </li>
+                    <li class="car-card__spec">
+                        <img class="car-card__spec-icon" src="CSS/icons/type.svg" alt="">
+                        <span class="car-card__spec-value">Petrol</span>
+                        <span class="car-card__spec-label">Type</span>
+                    </li>
+                </ul>
+
+                <a class="car-card__button" href="#contact">Book Now</a>
+            </article>
+        </li>
+
+    </ul>
+
+    <a class="cars__all-link" href="#cars">View All Vehicles</a>
+
+</section>
+
+<section class="contact" id="contact">
+
+    <p class="contact__badge">Get in Touch</p>
+    <h2 class="contact__title">Visit Our Showroom</h2>
+    <p class="contact__description">
+        Schedule a visit or reach out to our team for personalized assistance.
+    </p>
+
+    <form class="contact-form">
+        <h3 class="contact-form__title">Send us a Message</h3>
+
+        <fieldset class="contact-form__row">
+            <legend class="contact-form__legend">Personal Information</legend>
+
+            <div class="contact-form__field">
+                <label class="contact-form__label" for="first-name">First Name</label>
+                <input class="form-control" id="first-name" name="first-name"
+                       type="text" placeholder="John">
+            </div>
+
+            <div class="contact-form__field">
+                <label class="contact-form__label" for="last-name">Last Name</label>
+                <input class="form-control" id="last-name" name="last-name"
+                       type="text" placeholder="Doe">
+            </div>
+        </fieldset>
+
+        <label class="contact-form__label" for="email">Email Address</label>
+        <input class="form-control" id="email" name="email"
+               type="email" placeholder="john@example.com">
+
+        <label class="contact-form__label" for="phone">Phone Number</label>
+        <input class="form-control" id="phone" name="phone"
+               type="tel" placeholder="+1 (555) 000-0000">
+
+        <label class="contact-form__label" for="date">Preferred Date</label>
+        <input class="form-control" id="date" name="date" type="date">
+
+        <label class="contact-form__label" for="time">Preferred Time</label>
+        <input class="form-control" id="time" name="time" type="time">
+
+        <label class="contact-form__label" for="interest">Interested In</label>
+        <select class="form-control" id="interest" name="interest">
+            <option>Test Drive</option>
+            <option>Vehicle Purchase</option>
+            <option>Financing</option>
+            <option>Service</option>
+        </select>
+
+        <label class="contact-form__label" for="message">Message</label>
+        <textarea class="form-control contact-form__message"
+                  id="message"
+                  name="message"
+                  placeholder="Tell us more about your requirements..."></textarea>
+
+        <label class="contact-form__agreement" for="agreement">
+            <input class="contact-form__checkbox"
+                   type="checkbox"
+                   id="agreement"
+                   name="agreement"
+                   required>
+            I agree to be contacted by Elite Auto.
+        </label>
+
+        <button class="contact-form__submit" type="submit">Send Message</button>
+    </form>
+
+
+    <aside class="showroom">
+
+        <h3 class="showroom__title">Showroom Location</h3>
+
+        <ul class="showroom__list">
+
+            <li class="showroom__item">
+                <img class="showroom__icon" src="CSS/icons/adress.svg" alt="">
+                <div class="showroom__content">
+                    <h3 class="showroom__item-title">Address</h3>
+                    <address class="showroom__detail">
+                        123 Luxury Drive, Premium District<br>
+                        Los Angeles, CA 90210
+                    </address>
+                </div>
+            </li>
+
+            <li class="showroom__item">
+                <img class="showroom__icon" src="CSS/icons/phone.svg" alt="">
+                <div class="showroom__content">
+                    <h3 class="showroom__item-title">Phone</h3>
+                    <p class="showroom__detail">
+                        <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="showroom__item">
+                <img class="showroom__icon" src="CSS/icons/email.svg" alt="">
+                <div class="showroom__content">
+                    <h3 class="showroom__item-title">Email</h3>
+                    <p class="showroom__detail">
+                        <a href="mailto:info@eliteauto.com">info@eliteauto.com</a>
+                    </p>
+                </div>
+            </li>
+
+            <li class="showroom__item">
+                <img class="showroom__icon" src="CSS/icons/hours.svg" alt="">
+                <div class="showroom__content">
+                    <h3 class="showroom__item-title">Hours</h3>
+                    <p class="showroom__detail">
+                        Mon - Fri: 9:00 AM - 7:00 PM<br>
+                        Sat - Sun: 10:00 AM - 6:00 PM
+                    </p>
+                </div>
+            </li>
+
+        </ul>
+
+        <section class="showroom__map">
+            <img class="showroom__map-icon" src="CSS/icons/map.svg" alt="">
+            <h3 class="showroom__map-title">Map View</h3>
+            <p class="showroom__map-description">Interactive map coming soon</p>
+        </section>
+
+    </aside>
+
+</section>
+
+
+<section class="about" id="about">
+
+    <p class="about__badge">About Us</p>
+    <h2 class="about__title">
+        Where Performance<br>
+        <span class="about__title-accent">Meets Style</span>
+    </h2>
+
+    <p class="about__description">
+        For over two decades, Elite Auto has been the premier destination
+        for luxury and performance vehicles. We pride ourselves on offering
+        an unparalleled selection of the world's finest automobiles.
+    </p>
+
+    <p class="about__description">
+        Our commitment to excellence extends beyond our inventory. From
+        personalized customer service to comprehensive after-sales support,
+        we ensure every aspect of your automotive journey is exceptional.
+    </p>
+
+    <p class="about__description">
+        Whether you're seeking the latest supercar or a timeless luxury sedan,
+        our expert team is dedicated to helping you find the perfect vehicle
+        that matches your lifestyle and aspirations.
+    </p>
+
+    <a class="about__link" href="#contact">Learn More About Us</a>
+
+    <ul class="about__features">
+
+        <li class="about__feature">
+            <article class="about__feature-card">
+                <img class="about__feature-icon" src="CSS/icons/award.svg" alt="">
+                <h3 class="about__feature-title">20+ Years Excellence</h3>
+                <p class="about__feature-description">Leading luxury automotive sales</p>
+            </article>
+        </li>
+
+        <li class="about__feature">
+            <article class="about__feature-card">
+                <img class="about__feature-icon" src="CSS/icons/quality.svg" alt="">
+                <h3 class="about__feature-title">Certified Quality</h3>
+                <p class="about__feature-description">Every vehicle thoroughly inspected</p>
+            </article>
+        </li>
+
+        <li class="about__feature">
+            <article class="about__feature-card">
+                <img class="about__feature-icon" src="CSS/icons/customers.svg" alt="">
+                <h3 class="about__feature-title">50K+ Customers</h3>
+                <p class="about__feature-description">Trusted by automotive enthusiasts</p>
+            </article>
+        </li>
+
+        <li class="about__feature">
+            <article class="about__feature-card">
+                <img class="about__feature-icon" src="CSS/icons/value.svg" alt="">
+                <h3 class="about__feature-title">Best Value</h3>
+                <p class="about__feature-description">Competitive pricing guaranteed</p>
+            </article>
+        </li>
+
+    </ul>
+
+</section>
+
+
+<section class="services" id="services">
+
+    <p class="services__badge">Our Services</p>
+    <h2 class="services__title">Luxury Cars, Premium Experience</h2>
+
+    <p class="services__description">
+        Comprehensive services designed to enhance your ownership experience.
+    </p>
+
+    <ul class="services__grid">
+
+        <li class="services__item">
+            <article class="service-card">
+                <img class="service-card__icon" src="CSS/icons/blue.svg" alt="Financing">
+                <h3 class="service-card__title">Flexible Financing</h3>
+                <p class="service-card__description">
+                    Customized payment plans with competitive rates and
+                    flexible terms to make your dream car affordable.
+                </p>
+            </article>
+        </li>
+
+        <li class="services__item">
+            <article class="service-card">
+                <img class="service-card__icon" src="CSS/icons/care.svg" alt="Maintenance">
+                <h3 class="service-card__title">Maintenance &amp; Care</h3>
+                <p class="service-card__description">
+                    Expert service and maintenance by certified technicians
+                    using genuine parts.
+                </p>
+            </article>
+        </li>
+
+        <li class="services__item">
+            <article class="service-card">
+                <img class="service-card__icon" src="CSS/icons/drive.svg" alt="Test Drive">
+                <h3 class="service-card__title">Test Drive</h3>
+                <p class="service-card__description">
+                    Experience the thrill firsthand with complimentary test
+                    drives scheduled at your convenience.
+                </p>
+            </article>
+        </li>
+
+        <li class="services__item">
+            <article class="service-card">
+                <img class="service-card__icon" src="CSS/icons/support.svg" alt="24/7 Support">
+                <h3 class="service-card__title">24/7 Support</h3>
+                <p class="service-card__description">
+                    Round-the-clock customer support and roadside assistance
+                    for complete peace of mind.
+                </p>
+            </article>
+        </li>
+
+    </ul>
+
+    <article class="services__promo">
+        <h3 class="services__promo-title">Ready to Get Started?</h3>
+        <p class="services__promo-description">
+            Schedule a consultation with our expert team today.
+        </p>
+        <a class="services__promo-link" href="#contact">Contact Us</a>
+    </article>
+
+</section>
+
+
+<section class="testimonials" id="testimonials">
+
+    <p class="testimonials__badge">Testimonials</p>
+    <h2 class="testimonials__title">What Our Clients Say</h2>
+
+    <p class="testimonials__description">
+        Join thousands of satisfied customers who chose Elite Auto.
+    </p>
+
+    <article class="testimonial-card">
+
+        <header class="testimonial-card__rating">
+            <span class="testimonial-card__stars">
+                <img class="testimonial-card__star" src="CSS/icons/star.svg" alt="">
+                <img class="testimonial-card__star" src="CSS/icons/star.svg" alt="">
+                <img class="testimonial-card__star" src="CSS/icons/star.svg" alt="">
+                <img class="testimonial-card__star" src="CSS/icons/star.svg" alt="">
+                <img class="testimonial-card__star" src="CSS/icons/star.svg" alt="">
+            </span>
+        </header>
+
+        <blockquote class="testimonial-card__quote">
+            "Exceptional service from start to finish. The team was
+            knowledgeable, professional, and helped me find the perfect
+            luxury sedan. The entire process was seamless."
+        </blockquote>
+
+        <footer class="testimonial-card__author">
+            <img class="testimonial-card__avatar"
+                 src="CSS/icons/mr.svg"
+                 alt="Michael Rodriguez">
+
+            <div class="testimonial-card__author-info">
+                <h3 class="testimonial-card__author-name">Michael Rodriguez</h3>
+                <p class="testimonial-card__author-role">Business Executive</p>
+            </div>
+        </footer>
+
+    </article>
+
+
+    <article class="testimonial-card">
+
+        <header class="testimonial-card__rating">
+            <span class="testimonial-card__stars">
+                <img class="testimonial-card__star" src="CSS/icons/star.svg" alt="">
+                <img class="testimonial-card__star" src="CSS/icons/star.svg" alt="">
+                <img class="testimonial-card__star" src="CSS/icons/star.svg" alt="">
+                <img class="testimonial-card__star" src="CSS/icons/star.svg" alt="">
+                <img class="testimonial-card__star" src="CSS/icons/star.svg" alt="">
+            </span>
+        </header>
+
+        <blockquote class="testimonial-card__quote">
+            "Elite Auto exceeded all my expectations. Their attention to
+            detail and customer care is unmatched. I found my dream car and
+            the financing options were fantastic."
+        </blockquote>
+
+        <footer class="testimonial-card__author">
+            <img class="testimonial-card__avatar"
+                 src="CSS/icons/sr.svg"
+                 alt="Sarah Chen">
+
+            <div class="testimonial-card__author-info">
+                <h3 class="testimonial-card__author-name">Sarah Chen</h3>
+                <p class="testimonial-card__author-role">Entrepreneur</p>
+            </div>
+        </footer>
+
+    </article>
+
+
+    <article class="testimonial-card">
+
+        <header class="testimonial-card__rating">
+            <span class="testimonial-card__stars">
+                <img class="testimonial-card__star" src="CSS/icons/star.svg" alt="">
+                <img class="testimonial-card__star" src="CSS/icons/star.svg" alt="">
+                <img class="testimonial-card__star" src="CSS/icons/star.svg" alt="">
+                <img class="testimonial-card__star" src="CSS/icons/star.svg" alt="">
+                <img class="testimonial-card__star" src="CSS/icons/star.svg" alt="">
+            </span>
+        </header>
+
+        <blockquote class="testimonial-card__quote">
+            "The test drive experience was incredible. No pressure, just
+            genuine passion for cars. The staff really knows their vehicles.
+            Highly recommend Elite Auto!"
+        </blockquote>
+
+        <footer class="testimonial-card__author">
+            <img class="testimonial-card__avatar"
+                 src="CSS/icons/ja.svg"
+                 alt="James Anderson">
+
+            <div class="testimonial-card__author-info">
+                <h3 class="testimonial-card__author-name">James Anderson</h3>
+                <p class="testimonial-card__author-role">Tech Innovator</p>
+            </div>
+        </footer>
+
+    </article>
+
+
+    <dl class="testimonials__stats">
+
+        <div class="testimonials__stat">
+            <dt class="testimonials__stat-value">4.9/5</dt>
+            <dd class="testimonials__stat-label">Average Rating</dd>
+        </div>
+
+        <div class="testimonials__stat">
+            <dt class="testimonials__stat-value">10K+</dt>
+            <dd class="testimonials__stat-label">Reviews</dd>
+        </div>
+
+        <div class="testimonials__stat">
+            <dt class="testimonials__stat-value">98%</dt>
+            <dd class="testimonials__stat-label">Satisfaction</dd>
+        </div>
+
+        <div class="testimonials__stat">
+            <dt class="testimonials__stat-value">50K+</dt>
+            <dd class="testimonials__stat-label">Happy Clients</dd>
+        </div>
+
+    </dl>
+
+</section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <section class="site-footer__section site-footer__section--brand">
+
+        <p class="site-footer__description">
+            Your premier destination for luxury and performance vehicles.
+            Experience automotive excellence like never before.
+        </p>
+
+        <nav class="social-links">
+            <a class="social-links__link" href="#">
+                <img class="social-links__icon" src="CSS/icons/Facebook.svg" alt="Facebook">
+            </a>
+
+            <a class="social-links__link" href="#">
+                <img class="social-links__icon" src="CSS/icons/Twitter.svg" alt="Twitter">
+            </a>
+
+            <a class="social-links__link" href="#">
+                <img class="social-links__icon" src="CSS/icons/Instagram.svg" alt="Instagram">
+            </a>
+
+            <a class="social-links__link" href="#">
+                <img class="social-links__icon" src="CSS/icons/LinkedIn.svg" alt="LinkedIn">
+            </a>
+
+            <a class="social-links__link" href="#">
+                <img class="social-links__icon" src="CSS/icons/YouTube.svg" alt="YouTube">
+            </a>
+        </nav>
+
+    </section>
+
+
+    <nav class="site-footer__section">
+
+        <h3 class="site-footer__title">Quick Links</h3>
+
+        <a class="site-footer__link" href="#home">Home</a>
+        <a class="site-footer__link" href="#cars">Cars</a>
+        <a class="site-footer__link" href="#about">About</a>
+        <a class="site-footer__link" href="#services">Services</a>
+        <a class="site-footer__link" href="#contact">Contact</a>
+
+    </nav>
+
+
+    <section class="site-footer__section">
+
+        <h3 class="site-footer__title">Services</h3>
+
+        <a class="site-footer__link" href="#cars">New Vehicles</a>
+        <a class="site-footer__link" href="#cars">Pre-Owned Cars</a>
+        <a class="site-footer__link" href="#services">Financing</a>
+        <a class="site-footer__link" href="#contact">Trade-In</a>
+        <a class="site-footer__link" href="#services">Service &amp; Parts</a>
+        <a class="site-footer__link" href="#services">Warranty</a>
+
+    </section>
+
+
+    <section class="site-footer__section site-footer__section--newsletter">
+
+        <h3 class="site-footer__title">Newsletter</h3>
+
+        <p class="site-footer__description">
+            Subscribe to get updates on new arrivals and exclusive offers.
+        </p>
+
+        <form class="site-footer__newsletter-form">
+
+            <label class="site-footer__newsletter-label" for="newsletter-email">
+                Email Address
+            </label>
+
+            <input class="form-control site-footer__newsletter-input"
+                   id="newsletter-email"
+                   type="email"
+                   name="email"
+                   placeholder="Your email address"
+                   required>
+
+            <button class="site-footer__newsletter-button" type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <nav class="site-footer__legal">
+
+        <a class="site-footer__link" href="#">Privacy Policy</a>
+        <a class="site-footer__link" href="#">Terms of Service</a>
+        <a class="site-footer__link" href="#">Cookie Policy</a>
+        <a class="site-footer__link" href="#">Disclaimer</a>
+
+    </nav>
+
+
+    <p class="site-footer__copyright">
+        &copy; 2024 Elite Auto. All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
