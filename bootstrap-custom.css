@@ -1,0 +1,127 @@
+
+/* Основні налаштування */
+body {
+    background: #09090b;
+}
+
+/* Навігація */
+.ea-navbar {
+    background: rgba(9, 9, 11, .96);
+    border-bottom: 1px solid #27272a;
+}
+
+.navbar-brand span,
+.ea-hero h1 span {
+    color: #6090ff;
+}
+
+/* Кнопки */
+.ea-btn {
+    background: #405cf5;
+    border-color: #405cf5;
+    color: #fff;
+}
+
+.ea-btn:hover {
+    background: #3150df;
+    border-color: #3150df;
+    color: #fff;
+}
+
+/* Заголовки та посилання */
+.ea-kicker {
+    color: #7890ff;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-size: .78rem;
+}
+
+.ea-hero {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.ea-text-link {
+    color: #8ca2ff;
+    text-decoration: none;
+}
+
+.ea-text-link:hover {
+    color: #fff;
+}
+
+/* Карусель */
+.ea-carousel-image {
+    height: 430px;
+    object-fit: cover;
+    filter: brightness(.62);
+}
+
+/* Картки послуг */
+.ea-card {
+    background: #18181b;
+    color: #fff;
+    border: 1px solid #27272a;
+    transition: transform .25s ease, border-color .25s ease;
+}
+
+.ea-card:hover {
+    transform: translateY(-5px);
+    border-color: #405cf5;
+}
+
+.ea-card .card-text {
+    color: #9ca3af;
+}
+
+/* Іконки */
+.ea-icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    background: rgba(64, 92, 245, .16);
+    color: #8ca2ff;
+    font-size: 1.5rem;
+}
+
+/* Контактний блок */
+.ea-contact {
+    background: linear-gradient(110deg, #121b3e, #211337);
+    border: 1px solid rgba(64, 92, 245, .35);
+}
+
+/* Модальне вікно */
+.ea-modal {
+    background: #18181b;
+    color: #fff;
+    border: 1px solid #34343a;
+}
+
+/* Поля введення */
+.ea-input {
+    background: #09090b;
+    border-color: #34343a;
+    color: #fff;
+}
+
+.ea-input:focus {
+    background: #09090b;
+    color: #fff;
+    border-color: #6090ff;
+    box-shadow: 0 0 0 .2rem rgba(64, 92, 245, .2);
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+    .ea-carousel-image {
+        height: 270px;
+    }
+
+    .ea-hero {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+}
