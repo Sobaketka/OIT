@@ -1,0 +1,418 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Elite Auto — Bootstrap</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../CSS/bootstrap-custom.css">
+</head>
+
+<body class="text-light">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top ea-navbar">
+        <div class="container">
+
+            <a class="navbar-brand fw-semibold" href="../index.html">
+                Elite<span>Auto</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#eliteNav"
+                    aria-controls="eliteNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="eliteNav">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#collection">Collection</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+
+                <button class="btn ea-btn" type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#loginModal">
+                    Sign in
+                </button>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero section -->
+    <header class="container py-5 text-center ea-hero">
+
+        <p class="ea-kicker">Premium Collection</p>
+
+        <h1 class="display-4 fw-bold">
+            Find Your <span>Dream Car</span>
+        </h1>
+
+        <p class="lead text-secondary col-lg-8 mx-auto">
+            Discover premium vehicles, compare their features
+            and choose a car that matches your lifestyle.
+        </p>
+
+        <a class="btn ea-btn btn-lg me-2" href="#collection">
+            Explore Collection
+        </a>
+
+        <a class="btn btn-outline-light btn-lg" href="#contact">
+            Contact Us
+        </a>
+
+    </header>
+
+
+    <main class="container pb-5">
+
+        <!-- Cars carousel -->
+        <section class="mb-5" id="collection">
+
+            <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-3">
+
+                <div>
+                    <p class="ea-kicker mb-1">Our collection</p>
+                    <h2 class="fw-bold mb-0">Featured Vehicles</h2>
+                </div>
+
+                <a class="ea-text-link" href="../index.html#cars">
+                    View all vehicles →
+                </a>
+
+            </div>
+
+
+            <div id="carCarousel" class="carousel slide"
+                 data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+
+                    <button type="button"
+                            data-bs-target="#carCarousel"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Slide 1">
+                    </button>
+
+                    <button type="button"
+                            data-bs-target="#carCarousel"
+                            data-bs-slide-to="1"
+                            aria-label="Slide 2">
+                    </button>
+
+                    <button type="button"
+                            data-bs-target="#carCarousel"
+                            data-bs-slide-to="2"
+                            aria-label="Slide 3">
+                    </button>
+
+                </div>
+
+
+                <div class="carousel-inner rounded-4">
+
+                    <div class="carousel-item active">
+
+                        <img src="../CSS/Images/photo1.jpg"
+                             class="d-block w-100 ea-carousel-image"
+                             alt="Elite Sport GT">
+
+                        <div class="carousel-caption">
+                            <h3>Elite Sport GT</h3>
+                            <p>Power, precision and performance</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="carousel-item">
+
+                        <img src="../CSS/Images/photo2.jpg"
+                             class="d-block w-100 ea-carousel-image"
+                             alt="Prestige Sedan">
+
+                        <div class="carousel-caption">
+                            <h3>Prestige Sedan</h3>
+                            <p>Comfort for every journey</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="carousel-item">
+
+                        <img src="../CSS/Images/photo3.jpg"
+                             class="d-block w-100 ea-carousel-image"
+                             alt="Luxury SUV Pro">
+
+                        <div class="carousel-caption">
+                            <h3>Luxury SUV Pro</h3>
+                            <p>Modern design and innovation</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carCarousel"
+                        data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon"
+                          aria-hidden="true">
+                    </span>
+
+                    <span class="visually-hidden">Previous</span>
+
+                </button>
+
+
+                <button class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carCarousel"
+                        data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon"
+                          aria-hidden="true">
+                    </span>
+
+                    <span class="visually-hidden">Next</span>
+
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- Services -->
+        <section class="mb-5" id="services">
+
+            <p class="ea-kicker mb-1">What we offer</p>
+
+            <h2 class="fw-bold mb-4">Our Services</h2>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                <div class="col">
+                    <article class="card h-100 ea-card">
+
+                        <div class="card-body">
+
+                            <div class="ea-icon">↗</div>
+
+                            <h3 class="h5 card-title">
+                                Flexible Financing
+                            </h3>
+
+                            <p class="card-text">
+                                Choose a payment plan that works for you
+                                with clear terms and helpful guidance.
+                            </p>
+
+                        </div>
+
+                    </article>
+                </div>
+
+
+                <div class="col">
+                    <article class="card h-100 ea-card">
+
+                        <div class="card-body">
+
+                            <div class="ea-icon">⚙</div>
+
+                            <h3 class="h5 card-title">
+                                Maintenance &amp; Care
+                            </h3>
+
+                            <p class="card-text">
+                                Professional maintenance and support
+                                to keep your vehicle in excellent condition.
+                            </p>
+
+                        </div>
+
+                    </article>
+                </div>
+
+
+                <div class="col">
+                    <article class="card h-100 ea-card">
+
+                        <div class="card-body">
+
+                            <div class="ea-icon">➜</div>
+
+                            <h3 class="h5 card-title">
+                                Test Drive
+                            </h3>
+
+                            <p class="card-text">
+                                Experience your preferred vehicle before
+                                making a decision. Book a test drive
+                                with our team.
+                            </p>
+
+                        </div>
+
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Contact -->
+        <section class="ea-contact rounded-4 p-4 p-lg-5"
+                 id="contact">
+
+            <div class="row align-items-center g-4">
+
+                <div class="col-lg-7">
+
+                    <p class="ea-kicker mb-1">Get in touch</p>
+
+                    <h2 class="fw-bold">
+                        Ready to find your next car?
+                    </h2>
+
+                    <p class="text-secondary mb-0">
+                        Contact our team and we will help you
+                        choose the right vehicle.
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-5 text-lg-end">
+
+                    <a href="mailto:info@eliteauto.com"
+                       class="btn ea-btn btn-lg">
+                        Contact Elite Auto
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="container py-4 text-center text-secondary">
+
+        <p class="mb-1">
+            © 2026 Elite Auto. All rights reserved.
+        </p>
+
+        <a href="../index.html" class="ea-text-link">
+            Back to main website
+        </a>
+
+    </footer>
+
+
+    <!-- Sign in modal -->
+    <div class="modal fade" id="loginModal"
+         tabindex="-1"
+         aria-labelledby="loginModalLabel"
+         aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content ea-modal">
+
+                <div class="modal-header border-secondary">
+
+                    <h2 class="modal-title fs-5"
+                        id="loginModalLabel">
+                        Sign In
+                    </h2>
+
+                    <button type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="modal"
+                            aria-label="Close">
+                    </button>
+
+                </div>
+
+
+                <form class="modal-body">
+
+                    <label for="loginEmail" class="form-label">
+                        Email address
+                    </label>
+
+                    <input type="email"
+                           class="form-control ea-input mb-3"
+                           id="loginEmail"
+                           placeholder="name@example.com"
+                           required>
+
+
+                    <label for="loginPassword" class="form-label">
+                        Password
+                    </label>
+
+                    <input type="password"
+                           class="form-control ea-input mb-3"
+                           id="loginPassword"
+                           minlength="8"
+                           required>
+
+
+                    <button type="submit" class="btn ea-btn w-100">
+                        Sign In
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous">
+    </script>
+
+</body>
+</html>
