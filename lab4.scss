@@ -1,0 +1,431 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+// Адаптивне меню
+.menu-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  color: $text;
+  font-size: 25px;
+
+  .menu-toggle__close {
+    display: none;
+  }
+}
+
+.menu-checkbox:checked + .menu-toggle {
+  .menu-toggle__open {
+    display: none;
+  }
+
+  .menu-toggle__close {
+    display: inline;
+  }
+}
+
+// Кнопка Sign in і модальне вікно
+.site-header__signin {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 50px;
+  background: $primary;
+  color: $text;
+  font-size: 14px;
+  transition: background $transition;
+
+  &:hover {
+    background: $primary-hover;
+  }
+}
+
+.signin-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  @include center;
+  padding: 20px;
+  background: rgba(0, 0, 0, .78);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $transition, visibility $transition;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__backdrop {
+    position: absolute;
+    inset: 0;
+  }
+
+  &__dialog {
+    position: relative;
+    width: min(100%, 430px);
+    padding: 34px 28px;
+    border: 1px solid $border;
+    border-radius: $radius;
+    background: $surface;
+    transform: translateY(18px);
+    transition: transform $transition;
+  }
+
+  &:target &__dialog {
+    transform: translateY(0);
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    color: $text-muted;
+    font-size: 28px;
+  }
+
+  &__description,
+  &__note {
+    color: $text-muted;
+  }
+
+  &__note {
+    margin: 16px 0 0;
+    font-size: 12px;
+  }
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  label {
+    margin-top: 10px;
+    color: $text-muted;
+    font-size: 13px;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid $border;
+    border-radius: 7px;
+    background: $bg;
+    color: $text;
+
+    &:focus {
+      outline: 2px solid $primary-light;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: $border-alarm;
+    }
+
+    &:valid:not(:placeholder-shown) {
+      border-color: #38a169;
+    }
+  }
+
+  button {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 7px;
+    background: $primary;
+    color: $text;
+    cursor: pointer;
+
+    &:hover {
+      background: $primary-hover;
+    }
+  }
+}
+
+// Карусель відгуків
+.feedback {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 75px 25px;
+  text-align: center;
+
+  &__header {
+    margin-bottom: 28px;
+  }
+
+  &__badge {
+    display: inline-block;
+    padding: 5px 14px;
+    border: 1px solid rgba(64, 92, 245, .3);
+    border-radius: 50px;
+    background: rgba(64, 92, 245, .12);
+    color: $primary-light;
+    font-size: 12px;
+  }
+
+  &__title {
+    font-size: clamp(25px, 4vw, 34px);
+  }
+
+  &__description {
+    color: $text-muted;
+  }
+
+  &__radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  &__viewport {
+    overflow: hidden;
+  }
+
+  &__track {
+    display: flex;
+    transition: transform .45s ease;
+  }
+
+  &__controls {
+    @include center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__dots {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__dots label {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #555;
+    cursor: pointer;
+  }
+
+    &__arrows label {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin-left: 7px;
+    border: 1px solid $border;
+    border-radius: 50%;
+    color: $text;
+    cursor: pointer;
+    line-height: 1;
+  }
+}
+
+.feedback-card {
+  flex: 0 0 100%;
+  padding: 28px;
+  border: 1px solid $border;
+  border-radius: $radius;
+  background: $surface;
+  text-align: left;
+
+  &__stars {
+    color: #ffc247;
+    letter-spacing: 3px;
+  }
+
+  &__title {
+    margin: 12px 0;
+    font-size: 19px;
+  }
+
+  &__text {
+    min-height: 72px;
+    color: $text-muted;
+    line-height: 1.6;
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    padding-top: 14px;
+    border-top: 1px solid $border;
+
+    span {
+      margin-top: 3px;
+      color: $text-muted;
+      font-size: 12px;
+    }
+  }
+}
+
+/* Перемикання слайдів */
+@for $i from 1 through 4 {
+  $offset: ($i - 1) * -100%;
+
+  #feedback-#{$i}:checked ~ .feedback__viewport .feedback__track {
+    transform: translateX($offset);
+  }
+
+  #feedback-#{$i}:checked ~ .feedback__controls .feedback__dots label:nth-child(#{$i}) {
+    background: $primary;
+  }
+
+  #feedback-#{$i}:checked ~ .feedback__controls .feedback__arrows .feedback__prev--#{$i},
+  #feedback-#{$i}:checked ~ .feedback__controls .feedback__arrows .feedback__next--#{$i} {
+    display: inline-flex;
+  }
+}
+
+
+// Анімації
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__badge,
+.hero__title,
+.hero__description,
+.hero__actions {
+  animation: fade-up .7s ease both;
+}
+
+.car-card,
+.about__feature-card,
+.service-card {
+  transition: transform $transition, border-color $transition;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba(64, 92, 245, .7);
+  }
+}
+
+.to-top {
+  transition: transform $transition, background-color $transition, box-shadow $transition;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(64, 92, 245, .35);
+  }
+}
+
+// Адаптивність
+@include respond($bp-tablet) {
+  .menu-toggle {
+    display: block;
+    order: 3;
+  }
+
+  .site-header {
+    position: sticky;
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
+  .site-header__nav {
+    width: auto;
+    order: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(9, 9, 11, .98);
+    transition: max-height .35s ease;
+  }
+
+  .menu-checkbox:checked ~ .site-header__nav {
+    max-height: 80vh;
+    overflow-y: auto;
+    border-bottom: 1px solid $border;
+  }
+
+  .site-header__list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 24px;
+  }
+
+  .site-header__list > li {
+    padding: 8px 0;
+  }
+
+  .submenu,
+  .site-header__item--dropdown:hover .submenu,
+  .site-header__item--dropdown:focus-within .submenu {
+    position: static;
+    display: block;
+    margin: 5px 0 0 14px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .site-header__actions {
+    margin-left: auto;
+  }
+
+  .site-header__signin {
+    white-space: nowrap;
+  }
+
+  .feedback {
+    padding: 60px 20px;
+  }
+}
+
+@include respond($bp-phone) {
+  .site-header {
+    padding: 14px 18px;
+  }
+
+  .site-header__actions .search {
+    display: none;
+  }
+
+  .site-header__cta {
+    display: none;
+  }
+
+  .site-header__signin {
+    padding: 8px 16px;
+  }
+
+  .feedback-card {
+    padding: 22px;
+  }
+
+  .signin-modal__dialog {
+    padding: 30px 20px 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
