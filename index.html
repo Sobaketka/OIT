@@ -8,16 +8,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/lab4.css">
     <title>Elite Auto</title>
 </head>
 
-<body>
+<body id="top">
 
-<header class="site-header" id="top">
+<header class="site-header">
     <a class="site-header__brand" href="#home">
         <img class="site-header__logo" src="CSS/logo/logo.svg" alt="">
         Elite<span class="site-header__brand-accent">Auto</span>
     </a>
+
+<input type="checkbox" id="menu-checkbox" class="menu-checkbox">
+
+<label for="menu-checkbox" class="menu-toggle">
+    <span class="menu-toggle__open">☰</span>
+    <span class="menu-toggle__close">✕</span>
+</label>
+
 
     <nav class="site-header__nav" aria-label="Main">
         <ul class="site-header__list">
@@ -58,7 +67,6 @@
     </li>
         </ul>
     </nav>
-
     <div class="site-header__actions">
         <form class="search" role="search" action="#">
             <label class="search__label" for="site-search">Search</label>
@@ -68,6 +76,9 @@
             </button>
         </form>
         <a class="site-header__cta" href="#contact">Book Test Drive</a>
+        <a class="site-header__signin" href="#signin-modal">
+    Sign in
+</a>
     </div>
 </header>
 
@@ -463,6 +474,107 @@
 </section>
 
 
+<section class="feedback" id="feedback">
+
+    <div class="feedback__header">
+        <p class="feedback__badge">Website feedback</p>
+        <h2 class="feedback__title">What Visitors Think About Our Website</h2>
+        <p class="feedback__description">
+            Our visitors share their experience of using the Elite Auto website.
+        </p>
+    </div>
+
+    <input class="feedback__radio" type="radio" name="feedback-slide" id="feedback-1" checked>
+    <input class="feedback__radio" type="radio" name="feedback-slide" id="feedback-2">
+    <input class="feedback__radio" type="radio" name="feedback-slide" id="feedback-3">
+    <input class="feedback__radio" type="radio" name="feedback-slide" id="feedback-4">
+
+    <div class="feedback__viewport">
+        <div class="feedback__track">
+
+            <article class="feedback-card">
+                <p class="feedback-card__stars">★★★★★</p>
+                <h3 class="feedback-card__title">Easy to find a car</h3>
+                <p class="feedback-card__text">
+                    The website is clear and convenient. I quickly found several
+                    cars that matched my needs and compared their specifications.
+                </p>
+                <p class="feedback-card__author">
+                    <strong>Daniel Wilson</strong>
+                    <span>Website visitor</span>
+                </p>
+            </article>
+
+            <article class="feedback-card">
+                <p class="feedback-card__stars">★★★★★</p>
+                <h3 class="feedback-card__title">Looks great on mobile</h3>
+                <p class="feedback-card__text">
+                    I opened the website on my phone and everything was easy
+                    to use. The menu and car cards adapt well to the screen.
+                </p>
+                <p class="feedback-card__author">
+                    <strong>Emma Johnson</strong>
+                    <span>Website visitor</span>
+                </p>
+            </article>
+
+            <article class="feedback-card">
+                <p class="feedback-card__stars">★★★★★</p>
+                <h3 class="feedback-card__title">Useful information</h3>
+                <p class="feedback-card__text">
+                    All the important information about the cars is collected
+                    in one place. The specifications and photos help with choosing.
+                </p>
+                <p class="feedback-card__author">
+                    <strong>Oliver Smith</strong>
+                    <span>Website visitor</span>
+                </p>
+            </article>
+
+            <article class="feedback-card">
+                <p class="feedback-card__stars">★★★★☆</p>
+                <h3 class="feedback-card__title">Simple contact form</h3>
+                <p class="feedback-card__text">
+                    It was easy to find the contact section and send a request.
+                    The design is modern and does not distract from the cars.
+                </p>
+                <p class="feedback-card__author">
+                    <strong>Sophia Brown</strong>
+                    <span>Website visitor</span>
+                </p>
+            </article>
+
+        </div>
+    </div>
+
+    <div class="feedback__controls">
+
+        <div class="feedback__dots">
+            <label for="feedback-1" aria-label="Feedback 1"></label>
+            <label for="feedback-2" aria-label="Feedback 2"></label>
+            <label for="feedback-3" aria-label="Feedback 3"></label>
+            <label for="feedback-4" aria-label="Feedback 4"></label>
+        </div>
+
+        <div class="feedback__arrows">
+            <label class="feedback__prev feedback__prev--1" for="feedback-1">←</label>
+            <label class="feedback__next feedback__next--1" for="feedback-2">→</label>
+
+            <label class="feedback__prev feedback__prev--2" for="feedback-1">←</label>
+            <label class="feedback__next feedback__next--2" for="feedback-3">→</label>
+
+            <label class="feedback__prev feedback__prev--3" for="feedback-2">←</label>
+            <label class="feedback__next feedback__next--3" for="feedback-4">→</label>
+
+            <label class="feedback__prev feedback__prev--4" for="feedback-3">←</label>
+            <label class="feedback__next feedback__next--4" for="feedback-4">→</label>
+        </div>
+
+    </div>
+
+</section>
+
+
 <section class="contact" id="contact">
     <p class="contact__badge">Get in Touch</p>
     <h2 class="contact__title">Visit Our Showroom</h2>
@@ -595,6 +707,11 @@
             <li><a class="site-footer__link" href="#about">About</a></li>
             <li><a class="site-footer__link" href="#services">Services</a></li>
             <li><a class="site-footer__link" href="#contact">Contact</a></li>
+            <li>
+    <a class="site-footer__link" href="pages/bootstrap.html">
+        Bootstrap page
+    </a>
+</li>
         </ul>
     </nav>
 
@@ -633,9 +750,64 @@
 
 </footer>
 
+
+<div class="signin-modal" id="signin-modal"
+     role="dialog" aria-modal="true"
+     aria-labelledby="signin-title">
+
+    <a class="signin-modal__backdrop"
+       href="#close"
+       aria-label="Close sign in window"></a>
+
+    <div class="signin-modal__dialog">
+
+        <a class="signin-modal__close"
+           href="#close"
+           aria-label="Close">&times;</a>
+
+        <h2 id="signin-title">Sign In</h2>
+
+        <p class="signin-modal__description">
+            Enter your email and password to access your account.
+        </p>
+
+        <form class="signin-form" action="#" method="post">
+
+            <label for="signin-email">Email address</label>
+
+            <input id="signin-email"
+                   name="email"
+                   type="email"
+                   placeholder="name@example.com"
+                   autocomplete="email"
+                   required>
+
+            <label for="signin-password">Password</label>
+
+            <input id="signin-password"
+                   name="password"
+                   type="password"
+                   placeholder="Enter your password"
+                   minlength="8"
+                   autocomplete="current-password"
+                   required>
+
+            <button type="submit">Sign in</button>
+
+        </form>
+
+        <p class="signin-modal__note">
+            Fields marked above are required.
+        </p>
+
+    </div>
+</div>
+
+
 <div class="scroll-top-zone">
     <a class="to-top" href="#top" aria-label="Back to top"></a>
 </div>
 
 </body>
+
 </html>
